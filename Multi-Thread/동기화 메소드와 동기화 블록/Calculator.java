@@ -1,3 +1,5 @@
+//공유 객체
+//synchronized를 추가하며 임계 영역 만들기
 public class Calculator {
     private int memory;
 
@@ -5,7 +7,7 @@ public class Calculator {
         return memory;
     }
 
-    public void setMemory(int memory) { //계산기 메모리에 값을 저장하는 메소드
+    public synchronized void setMemory(int memory) { //계산기 메모리에 값을 저장하는 메소드
         this.memory = memory;   //매개값을 memory 필드에 저장
 
         try {
